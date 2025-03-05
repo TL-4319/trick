@@ -43,3 +43,18 @@ trickops_logs/
 coverage.info
 *.dSYM
 *.log
+
+# Ignore build files
+*.zip
+*.exe
+*.hh
+*.resource
+**/makefile
+**/S_job_execution
+**/S_run_summary
+**/send_hs
+**/varserver_log
+build
+.trick
+DP_Product
+

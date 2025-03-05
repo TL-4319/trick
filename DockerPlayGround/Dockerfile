@@ -58,7 +58,9 @@
     # Add ${TRICK_HOME}/bin to the PATH variable.
     # ------------------------------------------------------------------------------
     ENV TRICK_HOME="/apps/trick"
-    RUN echo "export PATH=${PATH}:${TRICK_HOME}/bin" >> ~/.bashrc
+    RUN echo "export PATH=${PATH}:${TRICK_HOME}/bin " >> ~/.bashrc
+    RUN echo "export TRICK_CFLAGS=\"-g -Wall -Wmissing-prototypes -Wextra -Wshadow\" " >> ~/.bashrc
+    RUN echo "export TRICK_CXXFLAGS=\"-g -Wall -Wextra -Wshadow\" " >> ~/.bashrc
     
     CMD ["/bin/bash"]
     
